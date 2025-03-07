@@ -10,7 +10,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseClass {
 	
 	WebDriver driver;
-	LandingPage landpage;
+	LandingPageWithoutPFM landpage;
 
 	@BeforeTest
 
@@ -20,7 +20,7 @@ public class BaseClass {
 		driver = new FirefoxDriver();
 
 		// Initialize LandingPage object
-		landpage = new LandingPage(driver);
+		landpage = new LandingPageWithoutPFM(driver);
 		driver.get("https://www.saucedemo.com/");
 		Thread.sleep(3000);
 

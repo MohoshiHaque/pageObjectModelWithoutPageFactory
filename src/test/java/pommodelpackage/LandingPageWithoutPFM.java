@@ -3,12 +3,12 @@ package pommodelpackage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LandingPage {
+public class LandingPageWithoutPFM {
 	
 	WebDriver driver;
 
 	// Constructor to initialize the WebDriver
-	public LandingPage(WebDriver driver) {
+	public LandingPageWithoutPFM(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver=driver;
 	}
