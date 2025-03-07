@@ -2,40 +2,45 @@ package pommodelpackage;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class LandingPageWithoutPFM {
-	
+
 	WebDriver driver;
 
-	// Constructor to initialize the WebDriver
+	// Constructor initializes PageFactory elements
+
 	public LandingPageWithoutPFM(WebDriver driver) {
 		// TODO Auto-generated constructor stub
-		this.driver=driver;
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
-	
-    // Locators defined using By
 
-	By username = By.id("user-name");
-	By password = By.id("password");
-	By loginbutton = By.id("login-button");
-	
-	
-	 // Methods to interact with elements
-	
+	// Locators using @FindBy annotation
+
+	@FindBy(id = "user-name")
+	WebElement username;
+
+	@FindBy(id = "password")
+	WebElement password;
+
+	@FindBy(id = "user-name")
+	WebElement loginbtn;
+
+	// Methods to interact with elements
+
 	public void enterusername(String uname) {
-		driver.findElement(username).sendKeys(uname);		
+		username.sendKeys(uname);
 	}
-	
+
 	public void enterpassword(String pwd) {
-		driver.findElement(password).sendKeys(pwd);		
+		password.sendKeys(pwd);
 	}
-	
+
 	public void loginbuttonclick() {
-		driver.findElement(loginbutton).click();	
+		loginbtn.click();
 	}
-	
-	
-	
-	
 
 }
