@@ -1,4 +1,4 @@
-package pommodelpackage;
+package mohoshi.pageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -6,13 +6,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LandingPageWithoutPFM {
+public class LoginPage {
 
 	WebDriver driver;
 
 	// Constructor initializes PageFactory elements
 
-	public LandingPageWithoutPFM(WebDriver driver) {
+	public LoginPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -26,7 +26,7 @@ public class LandingPageWithoutPFM {
 	@FindBy(id = "password")
 	WebElement password;
 
-	@FindBy(id = "user-name")
+	@FindBy(id = "login-button")
 	WebElement loginbtn;
 
 	// Methods to interact with elements
@@ -44,3 +44,4 @@ public class LandingPageWithoutPFM {
 	}
 
 }
+
